@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "const",  // project name
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Project/const/const.exe", // project exe  这个const是由CMakeLists指定的
+            "args": [],
+            "stopAtEntry": false, //// 选为true则会在打开控制台后停滞，暂时不执行程序
+            "cwd": "${workspaceFolder}", //// 当前工作路径：当前文件所在的工作空间
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:\\mingw64\\bin\\gdb.exe",   // 手动设置这里的exe地址
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }, {
+            "name": "static",  // project name
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Project/static/static.exe", // project exe ${file} 
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+
+    ]
+}
