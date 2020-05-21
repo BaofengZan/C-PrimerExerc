@@ -5,6 +5,26 @@
     // debug使用的配置
     "version": "0.2.0",
     "configurations": [
+    {
+        "name": "this_",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/Project/this/this_.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": true,
+        "MIMode": "gdb",
+        "miDebuggerPath": "D:\\mingw64\\bin\\gdb.exe",
+        "setupCommands": [
+            {
+                "description": "为 gdb 启用整齐打印",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+            }
+        ]
+    },
         {
             "name": "emplaceback",
             "type": "cppdbg",
@@ -14,7 +34,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
+            "externalConsole": true,
             "MIMode": "gdb",
             "miDebuggerPath": "D:\\mingw64\\bin\\gdb.exe",
             "setupCommands": [
@@ -34,7 +54,7 @@
             "stopAtEntry": false, //// 选为true则会在打开控制台后停滞，暂时不执行程序
             "cwd": "${workspaceFolder}", //// 当前工作路径：当前文件所在的工作空间
             "environment": [],
-            "externalConsole": false,
+            "externalConsole": true,
             "MIMode": "gdb",
             "miDebuggerPath": "D:\\mingw64\\bin\\gdb.exe",   // 手动设置这里的exe地址
             "setupCommands": [
@@ -53,7 +73,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
+            "externalConsole": true,
             "MIMode": "gdb",
             "miDebuggerPath": "D:\\mingw64\\bin\\gdb.exe",
             "setupCommands": [
