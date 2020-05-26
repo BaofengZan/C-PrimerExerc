@@ -53,7 +53,8 @@
         "xfacet": "cpp",
         "xlocinfo": "cpp",
         "xmemory0": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "chrono": "cpp"
     },
     "fileheader.configObj": {
         "prohibitAutoAdd": [ "txt", "json", "md" ] // 禁止.json .md文件，自动添加头部注释
