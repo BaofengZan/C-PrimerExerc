@@ -1,4 +1,4 @@
-# C-PrimerExerc
+# CPP PrimerExerc
 CPP练习的一些代码。
 
 ConcurrentAndThread 线程和进程
