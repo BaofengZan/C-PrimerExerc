@@ -49,7 +49,13 @@
         "ios": "cpp",
         "xiosbase": "cpp",
         "xlocale": "cpp",
-        "xlocnum": "cpp"
-    }
-   
+        "xlocnum": "cpp",
+        "xfacet": "cpp",
+        "xlocinfo": "cpp",
+        "xmemory0": "cpp",
+        "xstring": "cpp"
+    },
+    "fileheader.configObj": {
+        "prohibitAutoAdd": [ "txt", "json", "md" ] // 禁止.json .md文件，自动添加头部注释
+    },
 }

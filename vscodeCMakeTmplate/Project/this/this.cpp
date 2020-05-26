@@ -1,48 +1,41 @@
 /*
  * @Author: your name
  * @Date: 2020-05-21 12:37:21
- * @LastEditTime: 2020-05-21 12:51:04
- * @L
- * \astEditors: Please set LastEditors
+ * @LastEditTime: 2020-05-25 21:13:01
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vscodeCMakeTmplate\Project\this\this.cpp
  */ 
-#include<iostream>
-#include<cstring>
-#include<stdlib.h>
+#include<iostream>                     
 
-class Person
+class Base
 {
-private:
-    /* data */
-    int age;
-    char* name;
 public:
-    Person(char* n, int a)
+    inline virtual void who()
     {
-        name = new char[strlen(n)+1];
-        strcpy(name, n);
-        age = a;
-    }
-    ~Person()
-    {
-     delete[] name;   
-    }
-    int get_age() const{
-        return this->age;
-    }
-    Person& fuc()
-    {
-        return *this;
+        std::cout << "基类。。。" << std::endl;
     }
 };
 
+class Derived : public Base
+{
+    public:
+    inline void who()
+    {
+        std::cout << "派生类，，，" << std::endl;
+    }
+
+};
 
 int main()
 {
+    Base b;
+    b.who(); 
 
-    Person p("xxx", 10);
-    std::cout << p.get_age() << std::endl;
-    Person pp = p.fuc();
+    Base* ptr = new Derived();
+    ptr->who();
+
+    //delete ptr;
+    //ptr = nullptr;
     return 0;
 }
