@@ -6,6 +6,66 @@
     "version": "0.2.0",
     "configurations": [
     {
+        "name": "Pushback_Emplaceback",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/Project/${fileBasenameNoExtension}/${fileBasenameNoExtension}.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": true,
+        "MIMode": "gdb",
+        "miDebuggerPath": "gdb.exe",  // 将gdb.exe路径添加到了path中
+        "setupCommands": [
+            {
+                "description": "为 gdb 启用整齐打印",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+            }
+        ]
+    },
+    {
+        "name": "vptr_vtable",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/Project/${fileBasenameNoExtension}/${fileBasenameNoExtension}.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": true,
+        "MIMode": "gdb",
+        "miDebuggerPath": "D:\\mingw64\\bin\\gdb.exe",
+        "setupCommands": [
+            {
+                "description": "为 gdb 启用整齐打印",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+            }
+        ]
+    },
+    {
+        "name": "abstract",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/Project/${fileBasenameNoExtension}/${fileBasenameNoExtension}.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": true,
+        "MIMode": "gdb",
+        "miDebuggerPath":  "D:\\mingw64\\bin\\gdb.exe",
+        "setupCommands": [
+            {
+                "description": "为 gdb 启用整齐打印",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+            }
+        ]
+    },
+    {
         "name": "CircularQueueTemplate",
         "type": "cppdbg",
         "request": "launch",
