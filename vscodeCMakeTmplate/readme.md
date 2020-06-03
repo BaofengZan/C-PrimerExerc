@@ -9,3 +9,7 @@ vscode左下角的一系列配置需要去选择，比如 选择编译工具包�
 CircularQueueTemplate ： 中涉及到了 spdlog日志库的简单使用
 
 Pushback_Emplaceback : 为了验证 vector的push_back和emplace_back的使用和速度， 速度使用c++11的std::chorno来验证
+
+
+
+QuickVertification 用于快速验证某段代码，而无需再创建一个工程。

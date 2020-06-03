@@ -66,15 +66,15 @@ private:
 public:
 	A(int a) : m_a(a) // 别名: 类型转换构造函数，一个参数，可以把一个int转为类类型
 	{
-		std::cout << "A(int a) 构造函数执行 "  << this << std::endl;
+		std::cout << "A(int a) 构造函数执行 "  << this << " 线程id = " << std::this_thread::get_id() << std::endl;
 	}
 	A(const A& aa) :m_a(aa.m_a)
 	{
-		std::cout << "A 拷贝构造函数执行 " << this << std::endl;
+		std::cout << "A 拷贝构造函数执行 " << this << " 线程id = " << std::this_thread::get_id() << std::endl;
 	}
 	~A()
 	{
-		std::cout << "A 析构函数执行 " << this << std::endl;
+		std::cout << "A 析构函数执行 " << this << " 线程id = " << std::this_thread::get_id() << std::endl;
 	}
 
 private:
@@ -83,8 +83,8 @@ private:
 
 void myprint(const int i, const A& mybuf)
 {
-	std::cout << i << std::endl;
-	std::cout << &mybuf << std::endl;  // 打印A对象的地址
+  	//std::cout << i << std::endl;
+	std::cout << &mybuf << " 线程id = " << std::this_thread::get_id()  << std::endl;  // 打印A对象的地址
 
 }
 
@@ -113,8 +113,11 @@ int main()
 	//myobj.detach();
 	int AVar = 12;
 
-	std::thread myobj(myprint, var, A(AVar)); // 将AVar转为A对象，传递个myprint第二个参数【隐士转换】
-	myobj.detach();
+	std::cout << "main函数的线程id = " << std::this_thread::get_id() << std::endl;
+	//std::thread myobj(myprint, var, A(AVar)); // 将AVar转为A对象，传递个myprint第二个参数【隐士转换】
+	std::thread myobj(myprint, var, AVar); // 将AVar转为A对象，传递个myprint第二个参数【隐士转换】
+
+	myobj.join();
 	//std::cout << "main fuc" << std::endl;
 	//system("pause");
 	return 0;
