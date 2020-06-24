@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-05 18:03:05
- * @LastEditTime: 2020-06-09 22:57:27
+ * @LastEditTime: 2020-06-20 17:59:53
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vscodeCMakeTmplate\Project\10DayPractice\10DayPractice.cpp
@@ -544,6 +544,7 @@ int main()
     MyString s2("   ----------------");
     MyString s3 = s1 + s2;
     std::cout << s3 << std::endl;
+    
     return 0;
 }
 #endif

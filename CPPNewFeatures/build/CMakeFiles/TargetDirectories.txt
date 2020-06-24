@@ -1,0 +1,7 @@
+E:/LearningCodes/GithubRepo/C-PrimerExerc/CPPNewFeatures/build/CMakeFiles/edit_cache.dir
+E:/LearningCodes/GithubRepo/C-PrimerExerc/CPPNewFeatures/build/CMakeFiles/rebuild_cache.dir
+E:/LearningCodes/GithubRepo/C-PrimerExerc/CPPNewFeatures/build/Project/CMakeFiles/edit_cache.dir
+E:/LearningCodes/GithubRepo/C-PrimerExerc/CPPNewFeatures/build/Project/CMakeFiles/rebuild_cache.dir
+E:/LearningCodes/GithubRepo/C-PrimerExerc/CPPNewFeatures/build/Project/variadic/CMakeFiles/edit_cache.dir
+E:/LearningCodes/GithubRepo/C-PrimerExerc/CPPNewFeatures/build/Project/variadic/CMakeFiles/variadic.dir
+E:/LearningCodes/GithubRepo/C-PrimerExerc/CPPNewFeatures/build/Project/variadic/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/LearningCodes/GithubRepo/C-PrimerExerc/CPPNewFeatures/Project/variadic/variadic.cpp
+iostream
+-
+

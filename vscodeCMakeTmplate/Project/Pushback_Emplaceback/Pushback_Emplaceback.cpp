@@ -1,7 +1,7 @@
 /*
  * @Author: zanbf
  * @Date: 2020-05-28 17:53:16
- * @LastEditTime: 2020-05-28 22:44:58
+ * @LastEditTime: 2020-06-23 23:02:02
  * @LastEditors: Please set LastEditors
  * @Description: vector的push_back和emplace_back的速度比较  std::chrono
  * @FilePath: \vscodeCMakeTmplate\Project\Pushback_Emplaceback\Pushback_Emplaceback.cpp
@@ -122,7 +122,6 @@ int main()
     // 执行
     for (int i = 0; i < 1; i++)
     {
-        //vPresident.emplace_back(President("a", "b", 1));
         vPresident.emplace_back("a", "b", 1);
     }
     
@@ -130,5 +129,29 @@ int main()
     elapsed_seconds = end-start;
     t = elapsed_seconds.count(); // 转化为double
     std::cout << "<President> emplace_back takes time of: " << t << "s" << std::endl;
+
+    //3
+    vPresident.clear();
+    start = std::chrono::steady_clock::now();
+    // 执行
+    for (int i = 0; i < 1; i++)
+    {
+        // 有移动构造函数的情况下
+        // I am being constructed
+        // I am being moveing constructed.
+        // <President> emplace_back takes time of: 0.0010794s
+
+        //如果没有移动构造函数
+        //I am being constructed
+        //I am being copy constructed.
+        //<President> emplace_back takes time of: 0.0019493s
+        vPresident.emplace_back(President("a", "b", 1));
+    }
+    
+    end = std::chrono::steady_clock::now();
+    elapsed_seconds = end-start;
+    t = elapsed_seconds.count(); // 转化为double
+    std::cout << "<President> emplace_back takes time of: " << t << "s" << std::endl;
+    
     return 0;
 }

@@ -1,0 +1,7 @@
+[
+{
+  "directory": "E:/LearningCodes/GithubRepo/C-PrimerExerc/CPPNewFeatures/build/Project/variadic",
+  "command": "D:\\mingw64\\bin\\g++.exe     -std=c++11 -O0 -g -Wall -Wunused-function -pthread -g   -o CMakeFiles\\variadic.dir\\variadic.cpp.obj -c E:\\LearningCodes\\GithubRepo\\C-PrimerExerc\\CPPNewFeatures\\Project\\variadic\\variadic.cpp",
+  "file": "E:/LearningCodes/GithubRepo/C-PrimerExerc/CPPNewFeatures/Project/variadic/variadic.cpp"
+}
+]
